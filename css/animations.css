@@ -1,0 +1,602 @@
+/* ==========================================
+   PREMIUM ANIMATIONS
+========================================== */
+
+/* Floating Background */
+
+@keyframes floatGlow{
+
+    0%{
+        transform:translate(0px,0px) scale(1);
+    }
+
+    50%{
+        transform:translate(40px,-30px) scale(1.08);
+    }
+
+    100%{
+        transform:translate(0px,0px) scale(1);
+    }
+
+}
+
+.glow1{
+
+    animation:floatGlow 16s ease-in-out infinite;
+
+}
+
+.glow2{
+
+    animation:floatGlow 22s ease-in-out infinite reverse;
+
+}
+
+/* ==========================================
+   HEART DRAW
+========================================== */
+
+#heart-path{
+
+    stroke-dasharray:1600;
+
+    stroke-dashoffset:1600;
+
+    animation:
+
+        drawHeart 3s ease forwards,
+
+        pulseHeart 3s ease infinite 3s;
+
+}
+
+@keyframes drawHeart{
+
+    to{
+
+        stroke-dashoffset:0;
+
+    }
+
+}
+
+@keyframes pulseHeart{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero-content{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+#beginButton{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#beginButton::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.8),
+
+        transparent
+
+    );
+
+}
+
+#beginButton:hover::before{
+
+    animation:buttonShine 1s;
+
+}
+
+@keyframes buttonShine{
+
+    to{
+
+        left:140%;
+
+    }
+
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+.wheel{
+
+    animation:scrollWheel 2s infinite;
+
+}
+
+@keyframes scrollWheel{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+}
+
+/* ==========================================
+   HEARTBEAT
+========================================== */
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.12);
+
+    }
+
+    40%{
+
+        transform:scale(.98);
+
+    }
+
+    60%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/* ==========================================
+   FLOATING MEMORIES
+========================================== */
+
+.memory{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:
+
+        opacity 1.2s ease,
+
+        transform 1.2s ease;
+
+}
+
+.memory.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   QUOTES
+========================================== */
+
+.quote{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1.2s;
+
+}
+
+.quote.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+.memory-image img{
+
+    transition:
+
+        transform .8s ease,
+
+        filter .8s ease,
+
+        box-shadow .8s ease;
+
+}
+
+.memory:hover img{
+
+    transform:scale(1.04);
+
+    box-shadow:
+
+        0 40px 80px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.memory-card{
+
+    transition:
+
+        transform .6s ease,
+
+        box-shadow .6s ease;
+
+}
+
+.memory:hover .memory-card{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   TITLE GLOW
+========================================== */
+
+.hero h1{
+
+    animation:titleGlow 6s ease infinite;
+
+}
+
+@keyframes titleGlow{
+
+    0%,100%{
+
+        text-shadow:
+
+            0 0 0px transparent;
+
+    }
+
+    50%{
+
+        text-shadow:
+
+            0 0 30px rgba(255,170,210,.55);
+
+    }
+
+}
+
+/* ==========================================
+   FINALE HEART
+========================================== */
+
+#final-heart{
+
+    animation:
+
+        heartbeat 2.8s infinite,
+
+        floatHeart 5s ease-in-out infinite;
+
+}
+
+@keyframes floatHeart{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/* ==========================================
+   CELEBRATE BUTTON
+========================================== */
+
+#celebrateButton{
+
+    animation:buttonFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes buttonFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+/* ==========================================
+FINAL POLISH
+========================================== */
+
+.firefly{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff6a5;
+
+    box-shadow:0 0 20px #fff7ba;
+
+    animation:firefly 6s ease-in-out infinite;
+
+}
+
+@keyframes firefly{
+
+    0%,100%{
+
+        opacity:.15;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    z-index:20;
+
+    pointer-events:none;
+
+    animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    to{
+
+        transform:
+            translateY(120vh)
+            rotate(360deg);
+
+    }
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    background:rgba(255,255,255,.5);
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    animation:ripple .7s ease-out;
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:translate(-50%,-50%) scale(12);
+
+        opacity:0;
+
+    }
+
+}
+
+.secret-message{
+
+    position:fixed;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(.8);
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.2);
+
+    z-index:10000;
+
+    opacity:0;
+
+    transition:.5s;
+
+    text-align:center;
+
+}
+
+.secret-message.show{
+
+    opacity:1;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+.loaded{
+
+    animation:imageReveal 1.4s ease;
+
+}
+
+@keyframes imageReveal{
+
+    from{
+
+        opacity:0;
+
+        filter:blur(12px);
+
+        transform:scale(1.08);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        filter:blur(0);
+
+        transform:scale(1);
+
+    }
+
+}
+
+#progressBar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    height:4px;
+
+    width:0;
+
+    background:linear-gradient(
+        90deg,
+        #ff74ad,
+        #ffd166
+    );
+
+    z-index:99999;
+
+}

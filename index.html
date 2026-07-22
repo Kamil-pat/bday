@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <meta name="description"
+        content="A digital scrapbook celebrating our story together.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Background Layers -->
+
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="gradient-background"></div>
+
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+
+    <div id="confetti-container"></div>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ❤️
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <svg id="heart-svg"
+                viewBox="0 0 512 512"
+                width="140"
+                height="140">
+
+                <path
+                    id="heart-path"
+                    d="M256 464
+                    C256 464 32 320 32 160
+                    C32 72 98 32 160 32
+                    C208 32 240 60 256 90
+                    C272 60 304 32 352 32
+                    C414 32 480 72 480 160
+                    C480 320 256 464 256 464Z"/>
+
+            </svg>
+
+            <h1>
+
+                Happy Birthday
+
+            </h1>
+
+            <h2>
+
+                Beautiful ❤️
+
+            </h2>
+
+            <p>
+
+                Every moment with you has become one of my favorite memories.
+
+            </p>
+
+            <button id="beginButton">
+
+                Begin Our Story
+
+            </button>
+
+        </div>
+
+        <div class="scroll-indicator">
+
+            <span>Scroll</span>
+
+            <div class="mouse">
+
+                <div class="wheel"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Story -->
+
+    <main>
+
+        <section class="chapter-title">
+
+            <h2>
+
+                Our Story
+
+            </h2>
+
+            <p>
+
+                A few memories I'll always treasure.
+
+            </p>
+
+        </section>
+
+        <!-- ==========================
+OUR SONG
+========================== -->
+
+<section class="music-section">
+
+    <div class="music-card">
+
+        <span class="music-label">
+            Our Song
+        </span>
+
+        <h2>
+            Every beautiful story has a soundtrack.
+        </h2>
+
+        <p class="music-message">
+            Whenever I hear this song, it reminds me of your smile,
+            every adventure, and every moment we've shared together.
+        </p>
+
+        <div class="photo-frame album-art">
+
+            <img
+                src="images/our-song.jpg"
+                alt="Us Together"
+                id="albumImage">
+
+        </div>
+
+        <div class="song-info">
+
+            <h3>Zaalima</h3>
+
+            <p>Arijit Singh</p>
+
+        </div>
+
+        <audio id="audioPlayer">
+
+            <source
+                src="audio/oursong.mp3"
+                type="audio/mpeg">
+
+        </audio>
+
+        <div class="music-progress">
+
+            <span id="currentTime">0:00</span>
+
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+
+                </div>
+
+                <input
+                    id="progressBarMusic"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0">
+
+            </div>
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+        <div class="music-controls">
+
+            <button id="backButton">
+
+                ⏮
+
+            </button>
+
+            <button id="playPause">
+
+                ▶
+
+            </button>
+
+            <button id="nextButton">
+
+                ⏭
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <div class="timeline">
+
+            <!-- Memory 1 -->
+
+            <section class="memory left">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo1.jpg"
+                        alt="Memory One">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        December, 2025
+
+                    </span>
+
+                    <h3>
+
+                        The Beginning
+
+                    </h3>
+
+                    <p>
+
+                        I'll never forget how beautiful you looked and how nervous I was.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Quote -->
+
+            <section class="quote">
+
+                <p>
+
+                    "Sometimes the smallest moments become the biggest memories."
+
+                </p>
+
+            </section>
+
+            <!-- Memory 2 -->
+
+            <section class="memory right">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo2.jpg"
+                        alt="Memory Two">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        February, 2026
+
+                    </span>
+
+                    <h3>
+
+                        My Happiness
+
+                    </h3>
+
+                    <p>
+
+                        When I miss you the most, I find myself looking at this photo and remembering your smile, your laugh, and the way you make every day brighter.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quote -->
+
+            <section class="quote">
+
+                <p>
+
+                    "The best stories are written together."
+
+                </p>
+
+            </section>
+
+            <!-- Memory 3 -->
+
+            <section class="memory left">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo3.jpg"
+                        alt="Memory Three">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        March, 2026
+
+                    </span>
+
+                    <h3>
+
+                        The First Stay
+
+                    </h3>
+
+                    <p>
+
+                        I was so happy seeing you again after a long time. The way you smiled and the warmth of your hug is a feeling that I can't explain with words. Every moment of goofing around with you always makes my day.
+
+                    </p>
+
+                </div>
+
+            </section>
+                        <!-- Quote -->
+
+            <section class="quote">
+
+                <p>
+
+                    "Every chapter with you becomes my favorite one."
+
+                </p>
+
+            </section>
+
+            <!-- Memory 6 -->
+
+            <section class="memory right">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo6.jpg"
+                        alt="Memory Four">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        July 2026
+
+                    </span>
+
+                    <h3>
+
+                        My Favorite Memory
+                    </h3>
+
+                    <p>
+
+                        This was one of my favorite memories of us together. It was my first time doing anything like this and I still remeber looking up at you and seeing how zoned in you were and thinking, "Wow, I don't ever want this to end." One of my favorite things about you is how relaxing and refreshing you can be.
+                    </p>
+
+                </div>
+
+            </section>
+
+                        <!-- Quote -->
+
+            <section class="quote">
+
+                <p>
+
+                    "You are my wish that came true."
+
+                </p>
+
+            </section>
+
+            <!-- Memory 4 -->
+
+            <section class="memory left">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo4.jpg"
+                        alt="Memory Four">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        July 2026
+
+                    </span>
+
+                    <h3>
+
+                        Cake Baking
+                    </h3>
+
+                    <p>
+
+                        It was between making this cake or painting, but the laughs we shared and the teamwork we had making that cake is a feeling that I want to hold on to forever. And the way your eyes light up when you're jumping and dancing is a priceless moment for me. (DW I haven't forgotten the lemon shots lol)
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Quote -->
+
+            <section class="quote">
+
+                <p>
+
+                    "Home isn't a place. It's whoever you're with."
+
+                </p>
+
+            </section>
+
+            <!-- Memory 5 -->
+
+            <section class="memory right">
+
+                <div class="memory-image">
+
+                    <img
+                        src="images/photo5.jpg"
+                        alt="Memory Five">
+
+                </div>
+
+                <div class="memory-card">
+
+                    <span class="date">
+
+                        July, 2026
+
+                    </span>
+
+                    <h3>
+
+                        Us
+
+                    </h3>
+
+                    <p>
+
+                        I'm so excited to see what the future holds for us, and whatever it is, I know that it'll be amazing because we'll be there together. 
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <section class="quote">
+
+                <p>
+
+                    "You know what they say, gotta fold your laundry."
+
+                </p>
+
+            </section>
+
+<!-- ==========================================
+     THINGS I LIKE ABOUT YOU
+========================================== -->
+
+<section id="reasonsSection">
+
+    <div class="reasons-header">
+
+        <span class="section-tag">
+
+            ❤️ FOR YOU
+
+        </span>
+
+        <h2>
+
+            My Favorite Things About You
+
+        </h2>
+
+        <p>
+
+            There are countless things, but here are just a few that make you so special to me.
+
+        </p>
+
+    </div>
+
+    <div class="reason-card-container">
+
+        <div class="reason-card" id="reasonCard">
+
+            <!-- FRONT -->
+
+            <div class="card-face card-front">
+
+                <div class="heart-icon">
+
+                    ❤️
+
+                </div>
+
+                <h3>
+
+                    Tap to Reveal
+
+                </h3>
+
+                <p>
+
+                    Every card holds one thing I like so much about you.
+
+                </p>
+
+            </div>
+
+            <!-- BACK -->
+
+            <div class="card-face card-back">
+
+                <span class="reason-number">
+
+                    Reason <span id="reasonNumber">1</span>
+
+                </span>
+
+                <h3 id="reasonTitle">
+
+                    Your Smile
+
+                </h3>
+
+                <p id="reasonText">
+
+                    Your smile can make even the hardest day feel better.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="reason-navigation">
+
+        <button id="previousReason">
+
+            ← Previous
+
+        </button>
+
+        <span id="reasonCounter">
+
+            1 / 20
+
+        </span>
+
+        <button id="nextReason">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- Final Celebration -->
+
+    <section id="finale">
+
+        <div class="stars"></div>
+
+        <div class="final-content">
+
+            <svg
+                id="final-heart"
+                width="180"
+                height="180"
+                viewBox="0 0 512 512">
+
+                <path
+                    d="M256 464
+                    C256 464 32 320 32 160
+                    C32 72 98 32 160 32
+                    C208 32 240 60 256 90
+                    C272 60 304 32 352 32
+                    C414 32 480 72 480 160
+                    C480 320 256 464 256 464Z"/>
+
+            </svg>
+
+            <h1>
+
+                Happy Birthday ❤️
+
+            </h1>
+
+            <h2 id="typingText"></h2>
+
+            <div class="final-message">
+
+                <p>
+
+                    Thank you for every laugh, every adventure,
+                    every hug, every late-night conversation,
+                    and every memory we've created together.
+
+                </p>
+
+                <p>
+
+                    This is only the beginning of our story.
+
+                </p>
+
+            </div>
+
+            <button id="celebrateButton">
+
+                Celebrate 🎉
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+
+            Made with ❤️ just for you.
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="js/particles.js"></script>
+
+    <script src="js/timeline.js"></script>
+
+    <script src="js/typing.js"></script>
+
+    <script src="js/confetti.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/reasons.js"></script>
+
+    <script src="js/musicPlayer.js"></script>
+
+</body>
+
+</html>
