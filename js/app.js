@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             clicks++;
 
-            if (clicks === 7) {
+            if (clicks === 6) {
 
                 clicks = 0;
 
